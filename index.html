@@ -2,81 +2,277 @@
 <html>
 <head>
 	<title>My GitHub Work</title>
-	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 
-	<!--js is in that order so that dropdown works-->
-	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
-	<script type="text/javascript" src="popper.min.js"></script>
-	<script type="text/javascript" src="bootstrap.min.js"></script>
+	<!-- Material Design Bootstrap -->
+	<link href="css/mdb.min.css" rel="stylesheet">
+	<link href="css/mdb.css" rel="stylesheet">
 
-	
+	<style type="text/css">
+	div#iconBars ul.links{
+		padding-left: 200px;
+	}
+</style>
+
 </head>
-<body bgcolor="#fff">
+<body>
 
-<!--navbar-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-	<a href="#" class="navbar-brand">Grant's Work</a>
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#iconBars" aria-controls="iconBars" aria-expanded="false" aria-label="navigation collapse">
-		<span class="navbar-toggler-icon"></span>
-	</button>
+	<!--navbar-->
+	<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-black scrolling-navbar">
+		<a href="index.html" class="navbar-brand">Grant's Work</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#iconBars" aria-controls="iconBars" aria-expanded="false" aria-label="navigation collapse">
+			<span class="navbar-toggler-icon"></span>
+		</button>
 
-	<div class="navbar navbar-collapse" id="iconBars">
-		<ul class="navbar-nav">
-			<li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
-			<li class="nav-item"><a class="nav-link" href="#">About us</a></li>
-			<li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" href="#" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gallery</a>
+		<div class="collapse navbar-collapse" id="iconBars">
+			<ul class="navbar-nav links mr-auto"><!-- mr-auto puts social media icons at the extreme right -->
+				<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+				<li class="nav-item"><a class="nav-link" href="#about">About us</a></li>
+				<li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+			<!-- <li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#gallery" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gallery</a>
 				<div class="dropdown-menu" aria-labelledby="dropdownMenu">
 					<a href="#" class="dropdown-item">Staff</a>
 					<a href="#" class="dropdown-item">Infrastructure</a>
 					<a href="#" class="dropdown-item">Reservations</a>
 				</div>
+			</li> -->
+		</ul>
+
+		<!-- social media -->
+		<ul class="navbar-nav nav-flex-icons">
+			<li class="nav-item">
+				<a class="nav-link"><i class="fa fa-facebook"></i></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link"><i class="fa fa-twitter"></i></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link"><i class="fa fa-instagram"></i></a>
 			</li>
 		</ul>
+
+
 	</div>
 </nav>
 
-<!--carousel-->
-<!-- 
-<div id="carouselIndicators" class="carousel slide" data-ride="carousel">
+<!--carousel wrapper-->
+
+<div id="carouselIndicators" class="carousel slide carousel-fade" data-ride="carousel">
 	<ol class="carousel-indicators">
 		<li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
 		<li data-target="#carouselIndicators" data-slide-to="1"></li>
 		<li data-target="#carouselIndicators" data-slide-to="2"></li>
+		<!--   -->
 	</ol>
 
-	<div class="carousel-inner">
+	<div class="carousel-inner" role="listbox">
 		<div class="carousel-item active">
-			<img src="p.png" width="1500" height="450" alt="Python">
+			<img class="d-block w-100" src="images/py2.jpg" alt="Python">
+		</div>
+		<div class="carousel-item ">
+			<img class="d-block w-100" src="images/py.jpg" alt="Python">
 		</div>
 		<div class="carousel-item">
-			<img src="p1.png" width="1500" height="450" alt="Python">
+			<img class="d-block w-100" src="images/py1.jpg" alt="Python">
 		</div>
-		<div class="carousel-item">
-			<img src="p2.png" width="1500" height="450" alt="Python">
+		
+		<!-- <div class="carousel-item">
+			<img class="d-block w-100" src="images/py3.jpg" alt="Python">
+		</div> -->
+	</div>
+
+	<!--Controls-->
+	<a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		<span class="sr-only">Previous</span>
+	</a>
+	<a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+		<span class="carousel-control-next-icon" aria-hidden="true"></span>
+		<span class="sr-only">Next</span>
+	</a>
+	<!--/.Controls-->
+
+</div><br><br>
+
+
+<!-- cards -->
+<div class="container" id="about">
+	<div class="row">
+		
+		<div class="col-lg-4">
+			<div class="card card-dark">
+				<!-- card image -->
+				<div class="view overlay hm-white-slight">
+					<img src="images/py3.jpg" class="img-fluid">
+					<a href="">
+						<div class="mask"></div>
+					</a>
+				</div>
+				<!-- card body -->
+				<div class="card-body">
+					<a href="" class="activator"><i class="fa fa-share-alt white-text"></i></a>
+					<h4 class="card-title">General description Python</h4>
+					<hr>
+					<!--Text-->
+					<p class="card-text black-text">Python is a simple, easy to learn, powerful, high-level general purpose programming language.
+						<ul >
+							<li>Because code is automatically compiled to bytecode and executed, Python is suitable for use as a scripting language, Web application implementation language etc.</li>
+							<li>Because Python can be extended in C and C++, Python can provide the speed needed for even compute intensive tasks.</li>
+							<li>Because of its strong struvturing constructs (nested code blocks, functions, classes, modules and packages) and its consistent use of objects and object-oriented programming, Python enables us to write clear, logical applications for small and large tasks. </li>
+						</ul> </p>
+						<a href="#" class="d-flex flex-row-reverse">
+							<h5 class="waves-effect waves-light p-2">Read more <i class="fa fa-chevron-right"></i></h5>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4">
+				<div class="card card-dark">
+					<!-- card image -->
+					<div class="view overlay hm-white-slight">
+						<img src="images/py2.jpg" class="img-fluid">
+						<a href="">
+							<div class="mask"></div>
+						</a>
+					</div>
+					<!-- card body -->
+					<div class="card-body">
+						<a href="" class="activator"><i class="fa fa-share-alt white-text"></i></a>
+						<h4 class="card-title">Important features of Python</h4>
+						<hr>
+						<!--Text-->
+						<p class="card-text black-text">
+							<ul>
+								<li>Built-in high level data types: strings,lists, dictionaries etc</li>
+								<li>The usual control structures: if, if-else, if-elif-else, while, plus a powerful collection iterator(for)</li>
+								<li>Multiple levels of organizational structure: ,modules,packages</li>
+								<li>Object-oriented: Python provides a consistent way to use objects ie everything is an object. And in Python, its easy to implement new object types(called classes in object-oriented programming)</li>
+								<li>Easy to inetrface with C++(via SWIG)</li>
+								<li>Easy to inetrface with C/ObjC/java/Fortan</li>
+								<li>Great interactive environment</li>
+							</ul>
+						</p>
+						<a href="#" class="d-flex flex-row-reverse">
+							<h5 class="waves-effect waves-light p-2">Read more <i class="fa fa-chevron-right"></i></h5>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4">
+				<div class="card card-dark">
+					<!-- card image -->
+					<div class="view overlay hm-white-slight">
+						<img src="images/py.jpg" class="img-fluid">
+						<a href="">
+							<div class="mask"></div>
+						</a>
+					</div>
+					<!-- card body -->
+					<div class="card-body">
+						<a href="" class="activator"><i class="fa fa-share-alt white-text"></i></a>
+						<h4 class="card-title">Enough to undserstand the code</h4>
+						<hr>
+						<!--Text-->
+						<p class="card-text black-text">Basic Datatypes</p>
+						<ul >
+							<li>Integers(default for numbers) <code>z=5/2   #Answer is 2, inetger division</code></li>
+							<li>Floats <code>x=3.156</code></li>
+							<li>Strings <li>Can use "" or '' to spedify "abc" 'abc' (samething)</li></li>
+							<li> Unmatched can occur within the string.  “matt’s” </li>
+							<li> Use triple double-quotes for multi-line strings or strings than contain both ‘ and “ inside of them:  “““a‘b“c”””
+							</li>
+						</ul>
+						<a href="#" class="d-flex flex-row-reverse">
+							<h5 class="waves-effect waves-light p-2">Read more <i class="fa fa-chevron-right"></i></h5>
+						</a>
+					</div><!-- card body -->
+				</div><!-- card outer -->
+			</div><!-- end of col-lg-4 -->
+
+		</div><!-- end of row -->
+	</div><!-- end of container -->
+
+
+
+<!-- footer -->
+<footer class="page-footer center-on-small-only black">
+	
+	<!-- footer links -->
+	<div class="container">
+		<div class="row my-4">
+			
+			<!-- first column -->
+			<div class="col-md-4 col-lg-4">
+				<h5 class="title mb-4 font-bold">More Python links</h5>
+				<p> <a href="http://ipython.scipy.org/">iPython (better shell, distributed computing)</a> </p>
+				<p><a href="http:// www.scipy.org/ ">SciPy(collection of science tools)</a></p>
+			</div>
+
+			<hr class="clearfix w-100 d-md-none">
+
+            <!--Second column-->
+            <div class="col-md-2 col-lg-2 ml-auto">
+                <h5 class="title mb-4 font-bold">About</h5>
+                <ul>
+                    <p><a href="#!">PROJECTS</a></p>
+                    <p><a href="#!">ABOUT US</a></p>
+                    <p><a href="#!">BLOG</a></p>
+                   
+                </ul>
+            </div>
+            <!--/.Second column-->
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <!--Third column-->
+            <div class="col-md-4 col-lg-3">
+                <h5 class="title mb-4 font-bold">Address</h5>
+                <!--Info-->
+                <p><i class="fa fa-home mr-3"></i> Kampala, Uganda</p>
+                <p><i class="fa fa-envelope mr-3"></i> lailahgrant19@gmail.com</p>
+                <p><i class="fa fa-phone mr-3"></i> +256 774811651</p>
+                
+            </div>
+            <!--/.Third column-->
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <!--Fourth column-->
+            <div class="col-md-2 col-lg-2 text-center">
+                <h5 class="title mb-4 font-bold">Follow Us</h5>
+                <!--Social buttons-->
+                <div class="social-section mt-2 ">
+                    <!--Facebook-->
+                    <a class="btn-floating btn-small btn-fb"><i class="fa fa-facebook"></i></a>
+                    <!--Twitter-->
+                    <a class="btn-floating btn-small btn-tw"><i class="fa fa-twitter"></i></a>
+                    <!--Google +-->
+                    <a class="btn-floating btn-small btn-gplus"><i class="fa fa-google-plus"></i></a>
+                    <!--Dribbble-->
+                    <a class="btn-floating btn-small btn-dribbble"><i class="fa fa-dribbble"></i></a>
+                </div>
+            </div>
+            <!--/.Fourth column-->
+
 		</div>
 	</div>
 
-</div> -->
 
-<div style="padding: 20px;">
-	<h3>A general description of Python</h3>
-<p>Python is a simple, easy to learn, powerful, high-level general purpose programming language</p>
-<ul >
-	<li>Because code is automatically compiled to bytecode and executed, Python is suitable for use as a scripting language, Web application implementation language etc.</li>
-	<li>Because Python can be extended in C and C++, Python can provide the speed needed for even compute intensive tasks.</li>
-	<li>Because of its strong struvturing constructs (nested code blocks, functions, classes, modules and packages) and its consistent use of objects and object-oriented programming, Python enables us to write clear, logical applications for small and large tasks. </li>
-</ul>
+</footer>
 
-<p>Important features of Python</p>
-<ul>
-	<li>Built-in high level data types: strings,lists, dictionaries etc</li>
-	<li>The usual control structures: if, if-else, if-elif-else, while, plus a powerful collection iterator(for)</li>
-	<li>Multiple levels of organizational structure: ,modules,packages</li>
-	<li>Object-oriented: Python provides a consistent way to use objects ie everything is an object. And in Python, its easy to implement new object types(called classes in object-oriented programming)</li>
-</ul>
-</div>
+
+	<!--js is in that order so that dropdown works-->
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/popper.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<!-- MDB core JavaScript -->
+	<script type="text/javascript" src="js/mdb.min.js"></script>
+	<script type="text/javascript" src="js/mdb.js"></script>
+
 
 </body>
 </html>
